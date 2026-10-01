@@ -1,0 +1,41 @@
+{
+  "name": "playwright-ts",
+  "version": "1.0.0",
+  "description": "Playwright TypeScript UI automation starter",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --project=chromium --headed",
+    "test:debug": "playwright test --debug",
+    "test:qa": "cross-env NODE_ENV=qa playwright test",
+    "test:staging": "cross-env NODE_ENV=staging playwright test",
+    "report": "playwright show-report",
+    "codegen": "playwright codegen",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "playwright",
+    "typescript",
+    "automation",
+    "testing"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "@types/node": "^26.4.1",
+    "@typescript-eslint/eslint-plugin": "^8.69.0",
+    "@typescript-eslint/parser": "^8.69.0",
+    "cross-env": "^10.1.0",
+    "dotenv": "^17.4.2",
+    "eslint": "^10.9.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-playwright": "^2.11.0",
+    "prettier": "^3.9.6",
+    "typescript": "5.5.4"
+  }
+}
