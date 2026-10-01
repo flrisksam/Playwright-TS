@@ -1,10 +1,9 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from '../../src/fixtures/pages.fixture';
 
 test.describe('Home page', () => {
-  test('should display the expected page title', async ({ page }) => {
-    // Leading slash would resolve against the origin, dropping the baseURL's path segment.
-    await page.goto('');
+  test('should display the expected page title', async ({ homePage, page }) => {
+    await homePage.goto();
 
-    await expect(page).toHaveTitle('Practice Page11');
+    await expect(page).toHaveTitle('Practice Page');
   });
 });
