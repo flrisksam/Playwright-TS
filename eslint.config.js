@@ -37,7 +37,7 @@ module.exports = [
     },
     rules: {
       ...tseslint.configs.recommended.rules,
-      ...playwright.configs['flat/recommended'].rules,
+      .../** @type {any} */ (playwright).configs['flat/recommended'].rules,
       '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
       '@typescript-eslint/explicit-module-boundary-types': 'off',
       'no-console': 'warn',

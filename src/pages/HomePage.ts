@@ -5,6 +5,8 @@ export class HomePage {
 
   async goto(): Promise<void> {
     // Leading slash would resolve against the origin, dropping the baseURL's path segment.
-    await this.page.goto('');
+    // waitUntil 'domcontentloaded' avoids flaky timeouts from this third-party
+    // site's slow-loading ads/trackers, which delay the full 'load' event.
+    await this.page.goto('', { waitUntil: 'domcontentloaded' });
   }
 }
